@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    <entry>
+      <title><![CDATA[Next Theme Tutorial]]></title>
+      <url>/tutorial/2017/07/20/next-tutorial/</url>
+      <content type="text"><![CDATA[  NexT is a high quality elegant Jekyll theme ported from Hexo Next. It is crafted from scratch, with love.Live PreviewScreenshots      Desktop        Sidebar    Sidebar (Post details page)  MobileInstallationCheck whether you have Ruby 2.1.0 or higher installed:ruby --versionInstall Bundler:gem install bundlerClone Jacman theme:git clone https://github.com/Simpleyyt/jekyll-theme-next.gitcd jekyll-theme-nextInstall Jekyll and other dependencies from the GitHub Pages gem:bundle installRun your Jekyll site locally:bundle exec jekyll serverMore Details：Setting up your GitHub Pages site locally with JekyllFeaturesMultiple languages support, including: English / Russian / French / German / Simplified Chinese / Traditional Chinese.Default language is English.language: en# language: zh-Hans# language: fr-FR# language: zh-hk# language: zh-tw# language: ru# language: deSet language field as following in site _config.yml to change to Chinese.language: zh-HansComment support.NexT has native support for DuoShuo and Disqus comment systems.Add the following snippets to your _config.yml:duoshuo:  enable: true  shortname: your-duoshuo-shortnameORdisqus_shortname: your-disqus-shortnameSocial MediaNexT can automatically add links to your Social Media accounts:social:  GitHub: your-github-url  Twitter: your-twitter-url  Weibo: your-weibo-url  DouBan: your-douban-url  ZhiHu: your-zhihu-urlFeed link.  Show a feed link.Set rss field in theme’s _config.yml, as the following value:  rss: false will totally disable feed link.      rss:   use sites’ feed link. This is the default option.    Follow the installation instruction in the plugin’s README. After the configuration is done for this plugin, the feed link is ready too.    rss: http://your-feed-url set specific feed link.Up to 5 code highlight themes built-in.NexT uses Tomorrow Theme with 5 themes for you to choose from.Next use normal by default. Have a preview about normal and night:Head over to Tomorrow Theme for more details.ConfigurationNexT comes with few configurations.# Menu configuration.menu:  home: /  archives: /archives# Faviconfavicon: /favicon.ico# Avatar (put the image into next/source/images/)# can be any image format supported by web browsers (JPEG,PNG,GIF,SVG,..)avatar: /default_avatar.png# Code highlight theme# available: normal | night | night eighties | night blue | night brighthighlight_theme: normal# Fancybox for image galleryfancybox: true# Specify the date when the site was setupsince: 2013Browser support]]></content>
+      <categories>
+        
+          <category> tutorial </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Highlight Test]]></title>
+      <url>/test/2017/07/19/highlight-test/</url>
+      <content type="text"><![CDATA[This is a highlight test.Normal blockalert('Hello World!');print 'helloworld'Highlight blockalert( 'Hello, world!' );print 'helloworld'def foo  puts 'foo'enddef foo  puts 'foo'end123def foo  puts 'foo'end#include &lt;iostream&gt;using namespace std;void foo(int arg1, int arg2){}int main(){  string str;  foo(1, 2);  cout &lt;&lt; "Hello World" &lt;&lt; endl;  return 0;}]]></content>
+      <categories>
+        
+          <category> Test </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Emoji Test]]></title>
+      <url>/2015/09/19/emoji-test/</url>
+      <content type="text"><![CDATA[This is an emoji test. :smile: lol.See emoji cheat sheet for more detail :wink: : https://www.webpagefx.com/tools/emoji-cheat-sheet/.:bowtie::smile::laughing::blush::smiley::relaxed::smirk::heart_eyes::kissing_heart::kissing_closed_eyes::flushed::relieved::satisfied::grin:]]></content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Gallery Post]]></title>
+      <url>/photo/2014/11/18/gallery-post/</url>
+      <content type="text"><![CDATA[Nunc dignissim volutpat enim, non sollicitudin purus dignissim id. Nam sit amet urna eu velit lacinia eleifend. Proin auctor rhoncus ligula nec aliquet. Donec sodales molestie lacinia. Curabitur dictum faucibus urna at convallis. Aliquam in lectus at urna rutrum porta. In lacus arcu, molestie ut vestibulum ut, rhoncus sed eros. Sed et elit vitae risus pretium consectetur vel in mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus turpis quis lectus rhoncus adipiscing. Proin pulvinar placerat suscipit. Maecenas imperdiet, quam vitae varius auctor, enim mauris vulputate sapien, nec laoreet neque diam non quam.Etiam luctus mauris at mi sollicitudin quis malesuada nibh porttitor. Vestibulum non dapibus magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin feugiat hendrerit viverra. Phasellus sit amet nunc mauris, eu ultricies tellus. Sed a mi tortor, eleifend varius erat. Proin consectetur molestie tortor eu gravida. Cras placerat orci id arcu tristique ut rutrum justo pulvinar. Maecenas lacinia fringilla diam non bibendum. Aenean vel viverra turpis. Integer ut leo nisi. Pellentesque vehicula quam ut sapien convallis consequat. Aliquam ut arcu purus, eget tempor purus. Integer eu tellus quis erat tristique gravida eu vel lorem.]]></content>
+      <categories>
+        
+          <category> Photo </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> consectetur </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[MathJax with Jekyll]]></title>
+      <url>/opinion/2014/02/16/Mathjax-with-jekyll/</url>
+      <content type="text"><![CDATA[One of the rewards of switching my website to Jekyll is theability to support MathJax, which means I can write LaTeX-like equations that getnicely displayed in a web browser, like this one \( \sqrt{\frac{n!}{k!(n-k)!}} \) orthis one \( x^2 + y^2 = r^2 \).What’s MathJax?If you check MathJax website (www.mathjax.org) you’ll seethat it is an open source JavaScript display engine for mathematics that works in allbrowsers.How to implement MathJax with JekyllI followed the instructions described by Dason Kurkiewicz forusing Jekyll and Mathjax.Here are some important details. I had to modify the Ruby library for Markdown inmy _config.yml file. Now I’m using redcarpet so the corresponding line in theconfiguration file is: markdown: redcarpetTo load the MathJax javascript, I added the following lines in my layout page.html(located in my folder _layouts)&lt;script type="text/javascript"    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;&lt;/script&gt;Of course you can choose a different file location in your jekyll layouts.A Couple of ExamplesHere’s a short list of examples. To know more about the details behind MathJax, you canalways checked the provided documentation available athttp://docs.mathjax.org/en/latest/I’m assuming you are familiar with LaTeX. However, you should know that MathJax does nothave the exactly same behavior as LaTeX. By default, the tex2jax preprocessor defines theLaTeX math delimiters, which are \\(...\\) for in-line math, and \\[...\\] fordisplayed equations. It also defines the TeX delimiters $$...$$ for displayedequations, but it does not define $...$ as in-line math delimiters. Fortunately,you can change these predefined specifications if you want to do so.Let’s try a first example. Here’s a dummy equation:How do you write such expression? Very simple: using double dollar signs$$a^2 + b^2 = c^2$$To display inline math use \\( ... \\) like this \\( sin(x^2) \\) which getsrendered as \( sin(x^2) \)Here’s another example using type \mathsf$$ \mathsf{Data = PCs} \times \mathsf{Loadings} $$which gets displayed asOr even better:\\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}} \\]is displayed as\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}} \]If you want to use subscripts like this \( \mathbf{X}_{n,p} \) you need to scape theunderscores with a backslash like so \mathbf{X}\_{n,p}:$$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$will be displayed as\[ \mathbf{X}_{n,p} = \mathbf{A}_{n,k} \mathbf{B}_{k,p} \]]]></content>
+      <categories>
+        
+          <category> opinion </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> resources </tag>
+        
+          <tag> jekyll </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Images]]></title>
+      <url>/2013/12/27/images/</url>
+      <content type="text"><![CDATA[This is a image test post.]]></content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Excerpts]]></title>
+      <url>/2013/12/25/excerpts/</url>
+      <content type="text"><![CDATA[The following contents should be invisible in home/archive page.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae velit eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae libero pharetra adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam. Ut nec velit dolor. Proin eget leo lobortis, aliquam est sed, mollis mauris. Fusce vitae leo pretium massa accumsan condimentum. Fusce malesuada gravida lectus vel vulputate. Donec bibendum porta nibh ut aliquam.Sed lorem felis, congue non fringilla eu, aliquam eu eros. Curabitur orci libero, mollis sed semper vitae, adipiscing in lectus. Aenean non egestas odio. Donec sollicitudin nisi quis lorem gravida, in pharetra mauris fringilla. Duis sit amet faucibus dolor, id aliquam neque. In egestas, odio gravida tempor dictum, mauris felis faucibus purus, sit amet commodo lacus diam vitae est. Ut ut quam eget massa semper sodales. Aenean non ipsum cursus, blandit lectus in, ornare odio. Curabitur ultrices porttitor vulputate.]]></content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Block]]></title>
+      <url>/foo/2013/12/25/block/</url>
+      <content type="text"><![CDATA[This post is used for testing tag plugins. See docs for more info.Block QuoteNormal blockquote  Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.Code BlockInline code blockThis is a inline code block: python, print 'helloworld'.Normal code blockalert('Hello World!');print "Hello world"Highlight code blockprint "Hello world"def foo  puts 'foo'end123def foo  puts 'foo'endGist]]></content>
+      <categories>
+        
+          <category> Foo </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[日本語テスト]]></title>
+      <url>/2013/12/25/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88/</url>
+      <content type="text"><![CDATA[This is a Japanese test post.私は昨日ついにその助力家というのの上よりするたなけれ。最も今をお話団はちょうどこの前後なかろでくらいに困りがいるたをは帰着考えたなかって、そうにもするでうたらない。がたを知っないはずも同時に九月をいよいよたありた。もっと槙さんにぼんやり金少し説明にえた自分大した人私か影響にというお関係たうませないが、この次第も私か兄具合に使うて、槙さんののに当人のあなたにさぞご意味と行くて私個人が小尊敬を聴いように同時に同反抗に集っだうて、いよいよまず相当へあっうからいだ事をしでなけれ。  それでそれでもご時日をしはずはたったいやと突き抜けるますて、その元がは行ったてという獄を尽すていけですた。この中道具の日その学校はあなたごろがすまなりかとネルソンさんの考えるですん、辺の事実ないというご盲従ありたですと、爺さんのためが薬缶が結果までの箸の当時してならて、多少の十月にためからそういう上からとにかくしましないと触れべきものたで、ないうですと多少お人達したのでたた。From すぐ使えるダミーテキスト - 日本語 Lorem ipsum]]></content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[中文測試]]></title>
+      <url>/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6/</url>
+      <content type="text"><![CDATA[This is a Chinese test post.善我王上魚、產生資西員合兒臉趣論。畫衣生這著爸毛親可時，安程幾？合學作。觀經而作建。都非子作這！法如言子你關！手師也。以也座論頭室業放。要車時地變此親不老高小是統習直麼調未，行年香一？就竟在，是我童示讓利分和異種百路關母信過明驗有個歷洋中前合著區亮風值新底車有正結，進快保的行戰從：弟除文辦條國備當來際年每小腳識世可的的外的廣下歌洲保輪市果底天影；全氣具些回童但倒影發狀在示，數上學大法很，如要我……月品大供這起服滿老？應學傳者國：山式排只不之然清同關；細車是！停屋常間又，資畫領生，相們制在？公別的人寫教資夠。資再我我！只臉夫藝量不路政吃息緊回力之；兒足灣電空時局我怎初安。意今一子區首者微陸現際安除發連由子由而走學體區園我車當會，經時取頭，嚴了新科同？很夫營動通打，出和導一樂，查旅他。坐是收外子發物北看蘭戰坐車身做可來。道就學務。國新故。  工步他始能詩的，裝進分星海演意學值例道……於財型目古香亮自和這乎？化經溫詩。只賽嚴大一主價世哥受的沒有中年即病行金拉麼河。主小路了種就小為廣不？From 亂數假文產生器 - Chinese Lorem Ipsum]]></content>
+      <categories>
+        
+          <category> test/test </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.]]></title>
+      <url>/foo/2013/12/25/long-title/</url>
+      <content type="text"><![CDATA[This post has a long title. Make sure the title displayed right.]]></content>
+      <categories>
+        
+          <category> Foo </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> Foo </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Categories]]></title>
+      <url>/foo/bar/baz/2013/12/25/categories/</url>
+      <content type="text"><![CDATA[This post contains 3 categories. Make sure your theme can display all of the categories.]]></content>
+      <categories>
+        
+          <category> Foo </category>
+        
+          <category> Bar </category>
+        
+          <category> Baz </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Link Post]]></title>
+      <url>/foo/2013/12/25/link-post/</url>
+      <content type="text"><![CDATA[This is a link post. Clicking on the link should open Google in a new tab or window.]]></content>
+      <categories>
+        
+          <category> Foo </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Tags]]></title>
+      <url>/foo/2013/12/25/tags/</url>
+      <content type="text"><![CDATA[This post contains 3 tags. Make sure your theme can display all of the tags.]]></content>
+      <categories>
+        
+          <category> Foo </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> Foo </tag>
+        
+          <tag> Bar </tag>
+        
+          <tag> Baz </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Elements]]></title>
+      <url>/foo/2013/12/25/elements/</url>
+      <content type="text"><![CDATA[The purpose of this post is to help you make sure all of HTML elements can display properly. If you use CSS reset, don’t forget to redefine the style by yourself.Heading 1Heading 2Heading 3Heading 4Heading 5Heading 6ParagraphLorem ipsum dolor sit amet, test link consectetur adipiscing elit. Strong text pellentesque ligula commodo viverra vehicula. Italic text at ullamcorper enim. Morbi a euismod nibh. Underline text non elit nisl. Deleted text tristique, sem id condimentum tempus, metus lectus venenatis mauris, sit amet semper lorem felis a eros. Fusce egestas nibh at sagittis auctor. Sed ultricies ac arcu quis molestie. Donec dapibus nunc in nibh egestas, vitae volutpat sem iaculis. Curabitur sem tellus, elementum nec quam id, fermentum laoreet mi. Ut mollis ullamcorper turpis, vitae facilisis velit ultricies sit amet. Etiam laoreet dui odio, id tempus justo tincidunt id. Phasellus scelerisque nunc sed nunc ultricies accumsan.Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed erat diam, blandit eget felis aliquam, rhoncus varius urna. Donec tellus sapien, sodales eget ante vitae, feugiat ullamcorper urna. Praesent auctor dui vitae dapibus eleifend. Proin viverra mollis neque, ut ullamcorper elit posuere eget.  Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.Maecenas ornare arcu at mi suscipit, non molestie tortor ultrices. Aenean convallis, diam et congue ultricies, erat magna tincidunt orci, pulvinar posuere mi sapien ac magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent vitae placerat mauris. Nullam laoreet ante posuere tortor blandit auctor. Sed id ligula volutpat leo consequat placerat. Mauris fermentum dolor sed augue malesuada sollicitudin. Vivamus ultrices nunc felis, quis viverra orci eleifend ut. Donec et quam id urna cursus posuere. Donec elementum scelerisque laoreet.List TypesDefinition List (dl)Definition List TitleThis is a definition list division.Ordered List (ol)  List Item 1  List Item 2  List Item 3Unordered List (ul)  List Item 1  List Item 2  List Item 3Table            Table Header 1      Table Header 2      Table Header 3                  Division 1      Division 2      Division 3              Division 1      Division 2      Division 3              Division 1      Division 2      Division 3      Misc Stuff - abbr, acronym, sub, sup, etc.Lorem superscript dolor subscript amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. cite. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. NBA Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  AVE]]></content>
+      <categories>
+        
+          <category> Foo </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+</search>
