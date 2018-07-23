@@ -1,6 +1,6 @@
 ---
 layout: page
-type: about
+type: project
 ---
 
 开发中。。。
