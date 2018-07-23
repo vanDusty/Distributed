@@ -83,7 +83,7 @@
 <link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Jekyll, NexT" />
+  <meta name="keywords" content="风尘博客" />
 
 
 
@@ -94,7 +94,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/avator.png?v=5.1.1" />
 
 
 
@@ -112,7 +112,7 @@
 
 
 <meta name="description" content="# NexT &amp;gt; NexT is a high quality elegant [Jekyll](https://jekyllrb.com) theme ported from [Hexo NexT](https://github.com/iissnan/hexo-theme-next). It is crafted from scratch, with love. * [Live Preview](http://simpleyyt.github.io/jekyll-theme-next/) * [Yitao&apos;s Blog](http://simpleyyt.com) ## Screenshots * Desktop ![Desktop Preview](http://iissnan.com/nexus/next/desktop-preview.png) * Sidebar ![Desktop Sidebar Preview](http://iissnan.com/nexus/next/desktop-sidebar-preview.png) * Sidebar (Post details page) ![Desktop Sidebar Preview](http://iissnan.com/nexus/next/desktop-sidebar-toc.png) * Mobile ![Mobile Preview](http://iissnan.com/nexus/next/mobile.png) ## Installation Check whether you have `Ruby 2.1.0` or higher installed: ```sh ruby --version ``` Install `Bundler`: ```sh gem install bundler ``` Clone NexT theme: ```sh git clone https://github.com/Simpleyyt/jekyll-theme-next.git cd jekyll-theme-next ``` Install Jekyll and other dependencies from the GitHub Pages gem: ```sh bundle install ``` Run your Jekyll site locally: ```sh bundle exec jekyll server ``` More Details：[Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) ## Features ### Multiple languages support, including: English / Russian / French / German / Simplified Chinese / Traditional Chinese. Default language is English. ```yml language: en # language: zh-Hans # language: fr-FR # language: zh-hk # language: zh-tw # language: ru # language: de ``` Set `language` field as following in site `_config.yml` to change to Chinese. ```yml language: zh-Hans ``` ### Comment support. NexT has native support for `DuoShuo` and `Disqus` comment systems. Add the following snippets to your `_config.yml`: ```yml duoshuo: enable: true shortname: your-duoshuo-shortname ``` OR ```yml disqus_shortname: your-disqus-shortname ``` ### Social Media NexT can automatically add links to your Social Media accounts: ```yml social: GitHub: your-github-url Twitter: your-twitter-url Weibo: your-weibo-url DouBan: your-douban-url ZhiHu: your-zhihu-url ``` ### Feed link. &amp;gt; Show a feed link. Set `rss` field in theme&apos;s `_config.yml`, as the following value: 1. `rss: false` will totally disable feed link. 2. `rss: ` use sites&apos; feed link. This is the default option. Follow the installation instruction in the plugin&apos;s README. After the configuration is done for this plugin, the feed link is ready too. 3. `rss: http://your-feed-url` set specific feed link. ### Up to 5 code highlight themes built-in. NexT uses [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) with 5 themes for you to choose from. Next use `normal` by default. Have a preview about `normal` and `night`: ![Tomorrow Normal Preview](http://iissnan.com/nexus/next/tomorrow-normal.png) ![Tomorrow Night Preview](http://iissnan.com/nexus/next/tomorrow-night.png) Head over to [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) for more details. ## Configuration NexT comes with few configurations. ```yml # Menu configuration. menu: home: / archives: /archives # Favicon favicon: /assets/favicon.ico # Avatar (put the image into next/source/images/) # can be any image format supported by web browsers (JPEG,PNG,GIF,SVG,..) avatar: /assets/default_avatar.png # Code highlight theme # available: normal | night | night eighties | night blue | night bright highlight_theme: normal # Fancybox for image gallery fancybox: true # Specify the date when the site was setup since: 2013 ``` ## Browser support ![Browser support](http://iissnan.com/nexus/next/browser-support.png)">
-<meta name="keywords" content="Jekyll, NexT">
+<meta name="keywords" content="风尘博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="NexT">
 <meta property="og:url" content="http://localhost:4000/README.en/">
@@ -162,6 +162,16 @@
 
 
 
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?91e65bef4a46fa79511fb692f9e86ccd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -195,7 +205,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">我是一只小小小小........鸟。</p>
+        <h1 class="site-subtitle" itemprop="description">我是一只小小小小........鸟。</h1>
       
   </div>
 
@@ -274,6 +284,18 @@
           </a>
         </li>
       
+        
+        
+        
+        <li class="menu-item menu-item-project">
+          <a href="/project/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            项目
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -329,11 +351,11 @@
 <div id="posts" class="posts-expand">
 <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">
+	<h2 class="post-title" itemprop="name headline">
     
       NexT
     
-  </h1>
+  </h2>
 
 
 
@@ -564,8 +586,8 @@ Next use <code class="highlighter-rouge">normal</code> by default. Have a previe
                alt="Van zhang / 张凡" />
           <p class="site-author-name" itemprop="name">Van zhang / 张凡</p>
            
-              <p class="site-description motion-element" itemprop="description">Java工程师 | 3年开发 | 目前就职于杭州美人信息</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -619,7 +641,7 @@ Next use <code class="highlighter-rouge">normal</code> by default. Have a previe
               
               
               <span class="links-of-author-item">
-                <a href="https://github.com/your-user-name" target="_blank" title="GitHub">
+                <a href="https://github.com/vanDusty" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -630,18 +652,7 @@ Next use <code class="highlighter-rouge">normal</code> by default. Have a previe
               
               
               <span class="links-of-author-item">
-                <a href="https://twitter.com/your-user-name" target="_blank" title="Twitter">
-                  
-                    <i class="fa fa-fw fa-twitter"></i>
-                  
-                  Twitter
-                </a>
-              </span>
-            
-              
-              
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/your-user-name" target="_blank" title="微博">
+                <a href="https://weibo.com/5063148392/profile?topnav=1&is_hot=1" target="_blank" title="微博">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
@@ -679,13 +690,7 @@ Next use <code class="highlighter-rouge">normal</code> by default. Have a previe
                 
                 
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.51cto.com/" title="51CTO" target="_blank">51CTO</a>
-                </li>
-              
-                
-                
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.oschina.net/" title="中国社区" target="_blank">中国社区</a>
+                  <a href="https://www.oschina.net/" title="开源中国社区" target="_blank">开源中国社区</a>
                 </li>
               
                 
@@ -1232,6 +1237,113 @@ Next use <code class="highlighter-rouge">normal</code> by default. Have a previe
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("ViHgJaPTnfc6yI1ofeh84NC5-9Nh9j0Va", "OgDNeeGVksCCeOL5gvT3p36M");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

@@ -83,7 +83,7 @@
 <link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Jekyll, NexT" />
+  <meta name="keywords" content="风尘博客" />
 
 
 
@@ -94,7 +94,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/avator.png?v=5.1.1" />
 
 
 
@@ -112,7 +112,7 @@
 
 
 <meta name="description" content="# FastClick # FastClick is a simple, easy-to-use library for eliminating the 300ms delay between a physical tap and the firing of a `click` event on mobile browsers. The aim is to make your application feel less laggy and more responsive while avoiding any interference with your current logic. FastClick is developed by [FT Labs](http://labs.ft.com/), part of the Financial Times. [Explication en français](http://maxime.sh/2013/02/supprimer-le-lag-des-clics-sur-mobile-avec-fastclick/). [日本語で説明](https://developer.mozilla.org/ja/docs/Mozilla/Firefox_OS/Apps/Tips_and_techniques#Make_events_immediate)。 ## Why does the delay exist? ## According to [Google](https://developers.google.com/mobile/articles/fast_buttons): &amp;gt; ...mobile browsers will wait approximately 300ms from the time that you tap the button to fire the click event. The reason for this is that the browser is waiting to see if you are actually performing a double tap. ## Compatibility ## The library has been deployed as part of the [FT Web App](http://app.ft.com/) and is tried and tested on the following mobile browsers: * Mobile Safari on iOS 3 and upwards * Chrome on iOS 5 and upwards * Chrome on Android (ICS) * Opera Mobile 11.5 and upwards * Android Browser since Android 2 * PlayBook OS 1 and upwards ## When it isn&apos;t needed ## FastClick doesn&apos;t attach any listeners on desktop browsers. Chrome 32+ on Android with `width=device-width` in the [viewport meta tag](https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag) doesn&apos;t have a 300ms delay, therefore listeners aren&apos;t attached. ```html ``` Same goes for Chrome on Android (all versions) with `user-scalable=no` in the viewport meta tag. But be aware that `user-scalable=no` also disables pinch zooming, which may be an accessibility concern. For IE11+, you can use `touch-action: manipulation;` to disable double-tap-to-zoom on certain elements (like links and buttons). For IE10 use `-ms-touch-action: manipulation`. ## Usage ## Include fastclick.js in your JavaScript bundle or add it to your HTML page like this: ```html ``` The script must be loaded prior to instantiating FastClick on any element of the page. To instantiate FastClick on the `body`, which is the recommended method of use: ```js if (&apos;addEventListener&apos; in document) { document.addEventListener(&apos;DOMContentLoaded&apos;, function() { FastClick.attach(document.body); }, false); } ``` Or, if you&apos;re using jQuery: ```js $(function() { FastClick.attach(document.body); }); ``` If you&apos;re using Browserify or another CommonJS-style module system, the `FastClick.attach` function will be returned when you call `require(&apos;fastclick&apos;)`. As a result, the easiest way to use FastClick with these loaders is as follows: ```js var attachFastClick = require(&apos;fastclick&apos;); attachFastClick(document.body); ``` ### Minified ### Run `make` to build a minified version of FastClick using the Closure Compiler REST API. The minified file is saved to `build/fastclick.min.js` or you can [download a pre-minified version](http://build.origami.ft.com/bundles/js?modules=fastclick). Note: the pre-minified version is built using [our build service](http://origami.ft.com/docs/developer-guide/build-service/) which exposes the `FastClick` object through `Origami.fastclick` and will have the Browserify/CommonJS API (see above). ```js var attachFastClick = Origami.fastclick; attachFastClick(document.body); ``` ### AMD ### FastClick has AMD (Asynchronous Module Definition) support. This allows it to be lazy-loaded with an AMD loader, such as [RequireJS](http://requirejs.org/). Note that when using the AMD style require, the full `FastClick` object will be returned, _not_ `FastClick.attach` ```js var FastClick = require(&apos;fastclick&apos;); FastClick.attach(document.body, options); ``` ### Package managers ### You can install FastClick using [Component](https://github.com/component/component), [npm](https://npmjs.org/package/fastclick) or [Bower](http://bower.io/). For Ruby, there&apos;s a third-party gem called [fastclick-rails](http://rubygems.org/gems/fastclick-rails). For .NET there&apos;s a [NuGet package](http://nuget.org/packages/FastClick). ## Advanced ## ### Ignore certain elements with `needsclick` ### Sometimes you need FastClick to ignore certain elements. You can do this easily by adding the `needsclick` class. ```html Ignored by FastClick ``` #### Use case 1: non-synthetic click required #### Internally, FastClick uses `document.createEvent` to fire a synthetic `click` event as soon as `touchend` is fired by the browser. It then suppresses the additional `click` event created by the browser after that. In some cases, the non-synthetic `click` event created by the browser is required, as described in the [triggering focus example](http://ftlabs.github.com/fastclick/examples/focus.html). This is where the `needsclick` class comes in. Add the class to any element that requires a non-synthetic click. #### Use case 2: Twitter Bootstrap 2.2.2 dropdowns #### Another example of when to use the `needsclick` class is with dropdowns in Twitter Bootstrap 2.2.2. Bootstrap add its own `touchstart` listener for dropdowns, so you want to tell FastClick to ignore those. If you don&apos;t, touch devices will automatically close the dropdown as soon as it is clicked, because both FastClick and Bootstrap execute the synthetic click, one opens the dropdown, the second closes it immediately after. ```html Dropdown ``` ## Examples ## FastClick is designed to cope with many different browser oddities. Here are some examples to illustrate this: * [basic use](http://ftlabs.github.com/fastclick/examples/layer.html) showing the increase in perceived responsiveness * [triggering focus](http://ftlabs.github.com/fastclick/examples/focus.html) on an input element from a `click` handler * [input element](http://ftlabs.github.com/fastclick/examples/input.html) which never receives clicks but gets fast focus ## Tests ## There are no automated tests. The files in `tests/` are manual reduced test cases. We&apos;ve had a think about how best to test these cases, but they tend to be very browser/device specific and sometimes subjective which means it&apos;s not so trivial to test. ## Credits and collaboration ## FastClick is maintained by [Rowan Beentje](http://twitter.com/rowanbeentje), [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia) and [Matthew Andrews](http://twitter.com/andrewsmatt) at [FT Labs](http://labs.ft.com). All open source code released by FT Labs is licenced under the MIT licence. We welcome comments, feedback and suggestions. Please feel free to raise an issue or pull request.">
-<meta name="keywords" content="Jekyll, NexT">
+<meta name="keywords" content="风尘博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FastClick #">
 <meta property="og:url" content="http://localhost:4000/assets/lib/fastclick/">
@@ -162,6 +162,16 @@
 
 
 
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?91e65bef4a46fa79511fb692f9e86ccd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -195,7 +205,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">我是一只小小小小........鸟。</p>
+        <h1 class="site-subtitle" itemprop="description">我是一只小小小小........鸟。</h1>
       
   </div>
 
@@ -274,6 +284,18 @@
           </a>
         </li>
       
+        
+        
+        
+        <li class="menu-item menu-item-project">
+          <a href="/project/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            项目
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -329,11 +351,11 @@
 <div id="posts" class="posts-expand">
 <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">
+	<h2 class="post-title" itemprop="name headline">
     
       FastClick #
     
-  </h1>
+  </h2>
 
 
 
@@ -524,8 +546,8 @@
                alt="Van zhang / 张凡" />
           <p class="site-author-name" itemprop="name">Van zhang / 张凡</p>
            
-              <p class="site-description motion-element" itemprop="description">Java工程师 | 3年开发 | 目前就职于杭州美人信息</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -579,7 +601,7 @@
               
               
               <span class="links-of-author-item">
-                <a href="https://github.com/your-user-name" target="_blank" title="GitHub">
+                <a href="https://github.com/vanDusty" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -590,18 +612,7 @@
               
               
               <span class="links-of-author-item">
-                <a href="https://twitter.com/your-user-name" target="_blank" title="Twitter">
-                  
-                    <i class="fa fa-fw fa-twitter"></i>
-                  
-                  Twitter
-                </a>
-              </span>
-            
-              
-              
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/your-user-name" target="_blank" title="微博">
+                <a href="https://weibo.com/5063148392/profile?topnav=1&is_hot=1" target="_blank" title="微博">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
@@ -639,13 +650,7 @@
                 
                 
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.51cto.com/" title="51CTO" target="_blank">51CTO</a>
-                </li>
-              
-                
-                
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.oschina.net/" title="中国社区" target="_blank">中国社区</a>
+                  <a href="https://www.oschina.net/" title="开源中国社区" target="_blank">开源中国社区</a>
                 </li>
               
                 
@@ -1192,6 +1197,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("ViHgJaPTnfc6yI1ofeh84NC5-9Nh9j0Va", "OgDNeeGVksCCeOL5gvT3p36M");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
