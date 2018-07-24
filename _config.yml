@@ -12,7 +12,6 @@ avatar: /assets/images/avator.png
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans #语言
 date_format: '%Y-%m-%d'
-
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
 url: http://blog.dustyblog.cn/
@@ -125,7 +124,7 @@ menu:
   about: /about/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
-  project: /project/
+  project: /project.html
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -391,7 +390,7 @@ baidu_analytics: 91e65bef4a46fa79511fb692f9e86ccd
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname:
   count: true
   # hide comments (visitors need to click to load the comments)
@@ -416,7 +415,7 @@ changyan:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8zODMyMy8xNDg1MQ==
 
 # Support for gitalk comments system.
 gitalk:
@@ -616,13 +615,13 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: true
+canvas_nest: false
 
 # three_waves
 three_waves: false
 
 # canvas_lines
-canvas_lines: false
+canvas_lines: true
 
 # canvas_sphere
 canvas_sphere: false
