@@ -1,14 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-24T21:08:46+08:00</updated><id>http://localhost:4000/</id><title type="html">风尘博客</title><subtitle>Java工程师 | 3年开发 | 目前就职于杭州美人信息</subtitle><author><name>Van zhang / 张凡</name></author><entry><title type="html">hello word</title><link href="http://localhost:4000/%E9%9A%8F%E7%AC%94/2018/07/23/helloword/" rel="alternate" type="text/html" title="hello word" /><published>2018-07-23T07:31:30+08:00</published><updated>2018-07-23T07:31:30+08:00</updated><id>http://localhost:4000/%E9%9A%8F%E7%AC%94/2018/07/23/helloword</id><content type="html" xml:base="http://localhost:4000/%E9%9A%8F%E7%AC%94/2018/07/23/helloword/">&lt;h2 id=&quot;hello-word&quot;&gt;hello word!&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-24T23:26:56+08:00</updated><id>http://localhost:4000/</id><title type="html">风尘博客</title><subtitle>Java工程师 | 3年开发 | 目前就职于杭州美人信息</subtitle><author><name>Van zhang / 张凡</name></author><entry><title type="html">利用Github搭建博客</title><link href="http://localhost:4000/git/2018/07/23/%E5%88%A9%E7%94%A8Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="alternate" type="text/html" title="利用Github搭建博客" /><published>2018-07-23T07:31:30+08:00</published><updated>2018-07-23T07:31:30+08:00</updated><id>http://localhost:4000/git/2018/07/23/%E5%88%A9%E7%94%A8Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2</id><content type="html" xml:base="http://localhost:4000/git/2018/07/23/%E5%88%A9%E7%94%A8Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">&lt;p&gt;记得曾经看大佬总结过，程序员写博客一般分为三个阶段:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; print 'helloworld'&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;在第三方论坛写博客（CSDN、博客园、开源中国等等);&lt;/li&gt;
+  &lt;li&gt;自己动手搭建一个博客网站，从：购服务器(或虚拟主机) - 购域名 - 博客平台(Wordpress、帝国)搭建以及CDN加速、https认证等等，甚至自己动手写一套代码，搭建一个自己的博客网站；&lt;/li&gt;
+  &lt;li&gt;觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Hello, world!'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;很荣幸，我经历这些仅仅经过七个月左右(捂脸)，这里介绍一下如何利用第三方代码仓库(我用的是Github)来搭建静态的个人博客并自定义域名。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;一创建博客仓库&quot;&gt;一、创建博客仓库&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;登录 GitHub 之后，在页面右上角点击 + 加号按钮，点击 New repository；&lt;/li&gt;
+  &lt;li&gt;填写仓库的属性，注意：这个仓库名比较特殊，&lt;strong&gt;必须取名为userName.github.io&lt;/strong&gt;，userName为github的用户名，其他的按照一般仓库设置填写，创建；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;二静态博客建立&quot;&gt;二、静态博客建立&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;进入仓库，进入设置：setting，往下拉，找到GitHub Pages设置界面，如下图：
+&lt;img src=&quot;http://github.dustyblog.cn/articleImg/GitHub-website-01.jpeg&quot; alt=&quot;风尘博客&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;选择一个喜欢的主题， select theme，会返回到setting页面，这里直接提交即可；&lt;/li&gt;
+  &lt;li&gt;然后注意观察上图划痕的地址，即为创建好的博客的地址(一个github的二级域名)，这里，你可以访问该域名，即可访问你的静态博客。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;到这里，一个独立博客已经建立完成！&lt;/p&gt;
+
+&lt;h1 id=&quot;三绑定自定义域名&quot;&gt;三、绑定自定义域名&lt;/h1&gt;
+&lt;p&gt;之前我们是通过 &lt;a href=&quot;https://vanDusty.github.io&quot;&gt;https://vanDusty.github.io&lt;/a&gt; 来访问个人博客主页，现在我们可以通过自己设置的域名去访问我们的主页。&lt;/p&gt;
+&lt;h2 id=&quot;域名解析&quot;&gt;域名解析&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;我用的是之前在阿里云购买的域名。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;设置域名解析，记录类型：CNAME,主机记录记录的是你二级域名的前缀(例如：我这里是blog，我就可以通过&lt;a href=&quot;http://blog.dustyblog.cn&quot;&gt;http://blog.dustyblog.cn&lt;/a&gt;来访问了)，解析记录值为仓库名；&lt;/p&gt;
+&lt;h2 id=&quot;仓库绑定自定义域名&quot;&gt;仓库绑定自定义域名&lt;/h2&gt;
+&lt;p&gt;在仓库里添加一个文件，命名为 CNAME，文件名大写且没有后缀；文件里填写要绑定的域名(刚解析的二级域名)且不要包含http://和www (我这里填写的是blog.dustyblog.cn)。如图：
+&lt;img src=&quot;http://github.dustyblog.cn/articleImg/Github-website-02.png&quot; alt=&quot;风尘博客&quot; /&gt;
+然后，就可以通过自定义的二级域名来访问这个博客网站了。&lt;/p&gt;
+
+&lt;h1 id=&quot;四本地运行博客&quot;&gt;四、本地运行博客&lt;/h1&gt;
+&lt;h2 id=&quot;安装jekyll&quot;&gt;安装jekyll&lt;/h2&gt;
+&lt;p&gt;安装jekyll前先按照依赖包bundler，下述命令即可安装&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	gem install bundler 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Mac如果出现error安装失败则使用
+&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo gem install bundler &lt;/code&gt;：sodu是赋予管理员权限&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;之后，直接可以通过下述命令安装jekyll&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	gem install jekyll 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello word!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;p&gt;直到出现下面信息，则安装成功了。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Done installing documentation for public_suffix, addressable, colorator, http_parser.rb, eventmachine, em-websocket, concurrent-ruby, i18n, rb-fsevent, ffi, rb-inotify, sass-listen, sass, jekyll-sass-converter, ruby_dep, listen, jekyll-watch, kramdown, liquid, mercenary, forwardable-extended, pathutil, rouge, safe_yaml, jekyll after 79 seconds
+25 gems installed
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name>Van zhang / 张凡</name></author><category term="hello word" /><summary type="html">hello word!</summary></entry><entry><title type="html">两种上传代码的方式 [^footnote]</title><link href="http://localhost:4000/git/2018/06/29/%E4%B8%8A%E4%BC%A0%E4%BB%A3%E4%B9%B0%E5%88%B0Gihub%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" rel="alternate" type="text/html" title="两种上传代码的方式 [^footnote]" /><published>2018-06-29T07:31:30+08:00</published><updated>2018-06-29T07:31:30+08:00</updated><id>http://localhost:4000/git/2018/06/29/%E4%B8%8A%E4%BC%A0%E4%BB%A3%E4%B9%B0%E5%88%B0Gihub%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="http://localhost:4000/git/2018/06/29/%E4%B8%8A%E4%BC%A0%E4%BB%A3%E4%B9%B0%E5%88%B0Gihub%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/">&lt;blockquote&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;使用jekyll&quot;&gt;使用jekyll&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;进入你准备安放的位置，执行下面命令创建博客：
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ jekyll new blog 
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;进入blog目录
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; cd blog 
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;执行如下命令，会根据当前目录下的Gemfile，安装所需要的所有软件。这一步所安装的东西，可以说跟github本身的环境是完全一致的，所以可以确保本地如果没有错误，上传后也不会有错误。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; bundle install
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;使用下面命令，启动转化和本地服务：
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; bundle exec jekyll serve 
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;启动成功，输入： &lt;a href=&quot;http://127.0.0.1:4000/&quot;&gt;http://127.0.0.1:4000/&lt;/a&gt;，就本地运行你的博客了。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;五写博客文章&quot;&gt;五、写博客文章&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;所有的文章都是 _posts 目录下面，文章格式为&lt;code class=&quot;highlighter-rouge&quot;&gt; mardown &lt;/code&gt;格式，文章文件名可以是&lt;code class=&quot;highlighter-rouge&quot;&gt; .mardown  &lt;/code&gt;或者&lt;code class=&quot;highlighter-rouge&quot;&gt; .md &lt;/code&gt;结尾。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;编写一篇新文章很简单，你可以直接从 _posts/ 目录下复制一份 2018-03-20-welcome-to-jekyll.mardown，修改文件名，然后修改内容即可。然后使用如下命令启动，访问&lt;a href=&quot;http://127.0.0.1:4000/&quot;&gt;http://127.0.0.1:4000/&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	bundle exec jekyll serve 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;本地文章修改完成后，将项目push到Github，即可部署到线上，上传代码方式，详见：&lt;a href=&quot;&quot;&gt;上传代码到Github的两种方式&lt;/a&gt;一文。&lt;/p&gt;
+
+&lt;h1 id=&quot;六更换主题&quot;&gt;六、更换主题&lt;/h1&gt;
+&lt;p&gt;这里有很多主题模板可以参考 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes&lt;/a&gt;，可以从上面fork到自己的仓库中，然后close下来复制到自己的博客文件夹当中。 接下来，也是很重要的一点，因为克隆了别人的模板，所以在_config.yml文件中修改相应的信息，将模板变成自己的。&lt;/p&gt;</content><author><name>Van zhang / 张凡</name></author><category term="Github" /><summary type="html">记得曾经看大佬总结过，程序员写博客一般分为三个阶段:</summary></entry><entry><title type="html">上传代码到Github的两种方式</title><link href="http://localhost:4000/git/2018/06/29/%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0Github%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" rel="alternate" type="text/html" title="上传代码到Github的两种方式" /><published>2018-06-29T07:31:30+08:00</published><updated>2018-06-29T07:31:30+08:00</updated><id>http://localhost:4000/git/2018/06/29/%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0Github%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="http://localhost:4000/git/2018/06/29/%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0Github%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/">&lt;blockquote&gt;
   &lt;p&gt;本文介绍两种上传代码到Github：终端命令上传和IDEA 上传,各取所需，我两种方式都在用。
 当然，前提是：先有个Github账号，具体注册什么的，这里就不讲了。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -114,4 +209,8 @@ Token：点击Create API Token，输入在github中注册的用户名和密码�
 
 &lt;blockquote&gt;
   &lt;p&gt;通过对比，博主建议：如果该代码只需要提交一次，可以使用命令提交；如果是需要长期更新的代码，则通过IDEA管理提交比较好！&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Van zhang / 张凡</name></author><category term="Github" /><summary type="html">本文介绍两种上传代码到Github：终端命令上传和IDEA 上传,各取所需，我两种方式都在用。 当然，前提是：先有个Github账号，具体注册什么的，这里就不讲了。</summary></entry></feed>
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    转载请注明出处 [风尘博客](http://www.dustyblog.cn)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>Van zhang / 张凡</name></author><category term="Github" /><summary type="html">本文介绍两种上传代码到Github：终端命令上传和IDEA 上传,各取所需，我两种方式都在用。 当然，前提是：先有个Github账号，具体注册什么的，这里就不讲了。</summary></entry></feed>
