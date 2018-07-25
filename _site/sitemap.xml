@@ -30,9 +30,6 @@
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/project/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/README.en/</loc>
 </url>
 <url>
@@ -48,5 +45,9 @@
 <url>
 <loc>http://localhost:4000/baidu_verify_m8gGHu9fcF.html</loc>
 <lastmod>2018-07-24T00:31:25+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/project.html</loc>
+<lastmod>2018-07-25T00:44:29+08:00</lastmod>
 </url>
 </urlset>
