@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+# vanDusty.github.io
+静态博客托管
 
-You can use the [editor on GitHub](https://github.com/vanDusty/vanDusty.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+参考文章：
+https://www.cnblogs.com/fengxiongZz/p/7707219.html
+https://io-oi.me/tech/hexo-next-optimization.html 特别多的优化，还有其他文章可以用
+https://bestzuo.cn/posts/blog-establish.html
+https://theme-next.org/docs/getting-started/
+https://hexo.io/zh-cn/docs/server
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vanDusty/vanDusty.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+1. hexo g && hexo s 本地运行测试 //hexo s是启动hexo服务的,hexo g是重新生成public文件夹的命令
+1. hexo d -g 生成以及部署到github
+1. hexo new post “博客名” 新建一篇博客
+1. hexo clean && hexo g && hexo deploy
+hexo clean && hexo g && hexo s
