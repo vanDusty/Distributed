@@ -6,8 +6,8 @@ package cn.van.unique.id.utils;
  * FileName: SnowFlakeUtil
  *
  * @author: Van
- * Date:     2019-12-05 20:15
- * Description: 雪花id
+ * Date:     2019-12-01 20:15
+ * Description: 雪花ID工具类
  * Version： V1.0
  */
 public class SnowFlakeUtil {

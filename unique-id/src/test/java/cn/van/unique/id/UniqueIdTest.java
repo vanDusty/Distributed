@@ -10,7 +10,7 @@ import org.junit.Test;
  * FileName: UniqueIdTest
  *
  * @author: Van
- * Date:     2019-12-05 20:17
+ * Date:     2019-12-01 20:17
  * Description: ${DESCRIPTION}
  * Version： V1.0
  */
@@ -20,9 +20,7 @@ public class UniqueIdTest {
 
     @Test
     public void snowFlakeID() {
-        for (int i = 0; i < 10; i++) {
-            Long uniqueId = SnowFlakeUtil.nextId();
-            log.info("uniqueId:{}", uniqueId);
-        }
+        Long uniqueId = SnowFlakeUtil.nextId();
+        log.info("uniqueId:{}", uniqueId);
     }
 }
