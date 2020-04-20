@@ -26,17 +26,4 @@ public interface RedisLockService {
      */
     HttpResult receiveAward();
 
-    /**
-     * 售卖商品（加锁）
-     * @return
-     */
-    HttpResult saleGoods();
-
-
-    /**
-     * 售卖商品（加锁）
-     * @return
-     */
-    HttpResult saleGoodsLock();
-
 }

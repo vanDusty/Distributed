@@ -24,6 +24,6 @@ public class RedisLockApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(RedisLockApplication.class);
-        log.info("cn.van.redis.lock.RedisLockApplication start!");
+        log.info("RedisLockApplication start!");
     }
 }

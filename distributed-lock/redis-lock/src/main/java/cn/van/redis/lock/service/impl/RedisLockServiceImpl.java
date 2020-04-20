@@ -1,15 +1,11 @@
 package cn.van.redis.lock.service.impl;
 
 import cn.van.redis.lock.entity.FamilyRewardRecordDO;
-import cn.van.redis.lock.entity.GoodDO;
 import cn.van.redis.lock.mapper.FamilyRewardRecordMapper;
-import cn.van.redis.lock.mapper.GoodMapper;
 import cn.van.redis.lock.service.RedisLockService;
 import cn.van.redis.lock.util.HttpResult;
 import cn.van.redis.lock.util.RedisDistributedLock;
 import lombok.extern.slf4j.Slf4j;
-import org.redisson.api.RLock;
-import org.redisson.api.RedissonClient;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +14,6 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Copyright (C), 2015-2019, 风尘博客
@@ -38,16 +33,8 @@ public class RedisLockServiceImpl implements RedisLockService {
     RedisDistributedLock redisLock;
 
     @Resource
-    RedissonClient redissonClient;
-
-    @Resource
-    StringRedisTemplate stringRedisTemplate;
-
-    @Resource
     FamilyRewardRecordMapper familyRewardRecordMapper;
 
-    @Resource
-    GoodMapper goodMapper;
 
 
     @Override
@@ -110,50 +97,6 @@ public class RedisLockServiceImpl implements RedisLockService {
         }
         log.info("该记录已存在");
         return HttpResult.success("该记录已存在");
-    }
-
-    @Override
-    public HttpResult saleGoods(){
-        // 以指定goodId = 1：哇哈哈为例
-        Long goodId = 1L;
-        GoodDO goodDO = goodMapper.selectByPrimaryKey(goodId);
-        int goodStock = goodDO.getGoodCounts();
-        if (goodStock >= 1) {
-            goodMapper.saleOneGood(goodId);
-        }
-        return HttpResult.success();
-    }
-
-    @Override
-    public HttpResult saleGoodsLock(){
-        // 以指定goodId = 2：卫龙为例
-        Long goodId = 2L;
-        GoodDO goodDO = goodMapper.selectByPrimaryKey(goodId);
-        int goodStock = goodDO.getGoodCounts();
-        String key = goodDO.getGoodName();
-        log.info("{}剩余总库存,{}件", key,goodStock);
-        // 将商品的实时库存放在redis 中，便于读取
-        stringRedisTemplate.opsForValue().set(key, Integer.toString(goodStock));
-
-        // redisson 锁 的key
-        String lockKey = goodDO.getId() +"_" + key;
-        RLock lock = redissonClient.getLock(lockKey);
-        // 设置60秒自动释放锁  （默认是30秒自动过期）
-        lock.lock(60, TimeUnit.SECONDS);
-        // 此步开始，串行销售
-        int stock = Integer.parseInt(stringRedisTemplate.opsForValue().get(key));
-        // 如果缓存中库存量大于1，可以继续销售
-        if (stock >= 1) {
-            goodDO.setGoodCounts(stock - 1);
-            int num = goodMapper.saleOneGood(goodId);
-            if (num == 1) {
-                // 减库存成功，将缓存同步
-                stringRedisTemplate.opsForValue().set(key,Integer.toString((stock-1)));
-            }
-            log.info("{},当前库存,{}件", key,stock);
-        }
-        lock.unlock();
-        return HttpResult.success();
     }
 
     private String createUUID() {
