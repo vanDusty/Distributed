@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.van.redis.lock.mapper.FamilyRewardRecordMapper">
+<mapper namespace="FamilyRewardRecordMapper">
 
   <sql id="Base_Column_List">
     id, family_id, reward_type, state, create_time, update_time
@@ -12,7 +12,7 @@
     where family_id = #{familyId,jdbcType=BIGINT} and reward_type = #{rewardType,jdbcType=INTEGER}
   </select>
 
-  <insert id="insert" parameterType="cn.van.redis.lock.entity.FamilyRewardRecordDO">
+  <insert id="insert" parameterType="FamilyRewardRecordDO">
     insert into family_reward_record (id, family_id, reward_type,
       state, create_time, update_time
       )
