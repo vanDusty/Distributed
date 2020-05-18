@@ -37,9 +37,7 @@ public class RedissonLockServiceImpl implements RedissonLockService {
     GoodMapper goodMapper;
 
     @Override
-    public HttpResult saleGoods() {
-        // 以指定goodId = 1：哇哈哈为例
-        Long goodId = 1L;
+    public HttpResult saleGoods(Long goodId) {
         GoodDO goodDO = goodMapper.selectByPrimaryKey(goodId);
         int goodStock = goodDO.getGoodCounts();
         if (goodStock >= 1) {
@@ -50,34 +48,45 @@ public class RedissonLockServiceImpl implements RedissonLockService {
     }
 
     @Override
-    public HttpResult saleGoodsLock() {
-        // 以指定goodId = 2：卫龙为例
-        Long goodId = 2L;
+    public HttpResult saleGoodsLock(Long goodId) {
         GoodDO goodDO = goodMapper.selectByPrimaryKey(goodId);
         int goodStock = goodDO.getGoodCounts();
+
         String key = goodDO.getGoodName();
         log.info("{}剩余总库存,{}件", key,goodStock);
         // 将商品的实时库存放在redis 中，便于读取
         stringRedisTemplate.opsForValue().set(key, Integer.toString(goodStock));
-
         // redisson 锁 的key
-        String lockKey = goodDO.getId() +"_" + key;
-        RLock lock = redissonClient.getLock(lockKey);
-        // 设置60秒自动释放锁  （默认是30秒自动过期）
-        lock.lock(60, TimeUnit.SECONDS);
-        // 此步开始，串行销售
-        int stock = Integer.parseInt(stringRedisTemplate.opsForValue().get(key));
-        // 如果缓存中库存量大于1，可以继续销售
-        if (stock >= 1) {
-            goodDO.setGoodCounts(stock - 1);
-            int num = goodMapper.saleOneGood(goodId);
-            if (num == 1) {
-                // 减库存成功，将缓存同步
-                stringRedisTemplate.opsForValue().set(key,Integer.toString((stock-1)));
+        String lockKey = goodDO.getId() + "_" + key;
+        RLock lock = null;
+        try {
+            //获取Lock锁，设置锁的名称
+            lock = redissonClient.getLock(lockKey);
+            // 此步开始，串行执行
+            // 设置60秒自动释放锁  （默认是30秒自动过期）
+//            lock.lock(60, TimeUnit.SECONDS);
+            boolean res = lock.tryLock(100, 10, TimeUnit.SECONDS);
+            int stock = Integer.parseInt(stringRedisTemplate.opsForValue().get(key));
+            if (stock >= 1) {
+                if (res) {
+                    log.info( "======获得锁后进行售卖一件======");
+                    goodMapper.saleOneGood(goodId);
+                    // 减库存成功，将缓存同步
+                    stringRedisTemplate.opsForValue().set(key,Integer.toString((stock-1)));
+                } else {
+                    log.info( "======锁被占用======");
+                }
+                log.info("{}当前库存:{}件", key,stock);
             }
-            log.info("{},当前库存,{}件", key,stock);
+        }catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            //释放锁
+            if (lock != null) {
+                log.info("释放锁，lockKey:{}", lockKey);
+                lock.unlock();
+            }
         }
-        lock.unlock();
         return HttpResult.success();
     }
 }

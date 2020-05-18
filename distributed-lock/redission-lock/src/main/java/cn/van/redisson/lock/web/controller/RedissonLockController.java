@@ -1,5 +1,4 @@
 package cn.van.redisson.lock.web.controller;
-
 import cn.van.redisson.lock.service.RedissonLockService;
 import cn.van.redisson.lock.util.HttpResult;
 import io.swagger.annotations.Api;
@@ -30,7 +29,6 @@ import java.util.concurrent.TimeUnit;
 @Api(tags = "并发测试接口")
 public class RedissonLockController {
 
-
     @Resource
     RedissonLockService redissonLockService;
 
@@ -49,8 +47,7 @@ public class RedissonLockController {
         // 销售十次，不加锁会导致库存减少到负数
         for (int i = 1; i <= 10; i++) {
             Runnable task = () -> {
-                HttpResult result = redissonLockService.saleGoods();
-                log.info("result:{}", result);
+                redissonLockService.saleGoods(1L);
             };
             executor.execute(task);
         }
@@ -62,8 +59,7 @@ public class RedissonLockController {
     public HttpResult saleGoodsLock() {
         for (int i = 1; i <= 10; i++) {
             Runnable task = () -> {
-                HttpResult result = redissonLockService.saleGoodsLock();
-                log.info("result:{}", result);
+                redissonLockService.saleGoodsLock(2L);
             };
             executor.execute(task);
         }

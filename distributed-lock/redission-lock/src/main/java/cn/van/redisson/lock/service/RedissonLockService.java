@@ -17,13 +17,13 @@ public interface RedissonLockService {
      * 售卖商品（加锁）
      * @return
      */
-    HttpResult saleGoods();
+    HttpResult saleGoods(Long goodId);
 
 
     /**
      * 售卖商品（加锁）
      * @return
      */
-    HttpResult saleGoodsLock();
+    HttpResult saleGoodsLock(Long goodId);
 
 }

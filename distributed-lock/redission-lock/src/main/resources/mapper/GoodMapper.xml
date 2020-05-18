@@ -19,8 +19,8 @@
       where id = #{id,jdbcType=BIGINT}
     </select>
     <update id="saleOneGood" parameterType="java.lang.Long">
-    update good
-    set good_counts = good_counts - 1
-    where id = #{id,jdbcType=BIGINT}
-  </update>
+      update good
+      set good_counts = good_counts - 1
+      where id = #{id,jdbcType=BIGINT}
+    </update>
   </mapper>
